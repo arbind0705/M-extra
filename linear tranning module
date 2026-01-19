@@ -1,0 +1,20 @@
+# model tranning
+torch.mannual_seed():
+epoch = 100
+
+train_loss_value = []
+test_loss_values = []
+epoch_count = []
+
+for epoch iin range (epoch)
+  model.train()
+  Y.pred = model(X_train)
+  loss = loss_fn(Y_pred, Y_train)
+  optimizer.zero_grad()
+  loss.backward()
+  optimizer.step()
+
+model.eval()
+with torch.inference_mode():
+  test_pred = model(X_test)
+  test_loss = loss_fn(test_pred, Y_test.type (torch.float))
